@@ -1,88 +1,177 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Customized Fitness Plan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      body {
-        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-        font-family: 'Arial', sans-serif;
-        color: #fff;
-        animation: backgroundSlide 10s infinite alternate;
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customized Fitness Plan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    .navbar-collapse {
+    background: linear-gradient(135deg, #4a0b9b 0%, #1a3b7c 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      padding: 1rem;
+      border-radius: 0 0 10px 10px;
+      margin: 0 -1rem;
+    }
+    
+    .navbar-nav {
+      gap: 10px;
+    }
+    
+    .nav-link {
+      padding: 0.5rem !important;
+    }
+  }
+
+    body {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      animation: backgroundSlide 10s infinite alternate;
+    }
+
+    @keyframes backgroundSlide {
+      0% {
+        background-position: 0% 50%;
       }
-      @keyframes backgroundSlide {
-        0% { background-position: 0% 50%; }
-        100% { background-position: 100% 50%; }
+
+      100% {
+        background-position: 100% 50%;
       }
-      .workout-section {
-        max-width: 700px;
-        margin: 50px auto;
-        padding: 30px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(10px);
-        transition: transform 0.3s;
-      }
-      .workout-section:hover {
-        transform: scale(1.05);
-      }
-      h2 {
-        color: white;
-        font-weight: bold;
-      }
-      h4 {
-        color: #fff;
-        font-weight: bold;
-        margin-bottom: 15px;
-      }
-      ul {
-        text-align: left;
-        padding: 0;
-        list-style: none;
-        color: #fff;
-      }
-      ul li {
-        background: rgba(0, 0, 0, 0.1);
-        margin: 8px 0;
-        padding: 10px;
-        border-radius: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">FitnessApp</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Get New Plan!</a>
-            </li>
-          </ul>
-        </div>
+    }
+
+    .workout-section {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+
+    .workout-section:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      color: white;
+      font-weight: bold;
+    }
+
+    h4 {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      text-align: left;
+      padding: 0;
+      list-style: none;
+      color: #fff;
+    }
+
+    ul li {
+      background: rgba(0, 0, 0, 0.1);
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    h2 {
+      color: white;
+      font-weight: bold;
+      font-family: 'Lobster', cursive;
+    }
+
+    body {
+      padding-top: 60px;
+      /* Reduced from 70px */
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, #4a0b9b 0%, #1a3b7c 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 0.5rem 1rem;
+      /* Reduced padding */
+    }
+
+    .navbar-brand {
+      font-size: 1.1rem;
+      /* Smaller brand text */
+    }
+
+    .navbar-nav {
+      gap: 20px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 0.5rem 0.75rem !important;
+      /* Reduced padding */
+      font-size: 0.95rem;
+      /* Smaller link text */
+    }
+
+    .nav-link:hover {
+      color: #fff !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">FitnessApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Get New Plan!</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="workout-section" id="workoutPlan"></div>
+    </div>
+  </nav>
+  <div class="workout-section" id="workoutPlan"></div>
 
-    <script>
-      const bmi = parseFloat(sessionStorage.getItem('bmi'));
-      const workoutPlanDiv = document.getElementById('workoutPlan');
+  <script>
+    const bmi = parseFloat(sessionStorage.getItem('bmi'));
+    const workoutPlanDiv = document.getElementById('workoutPlan');
 
-      if (bmi < 18.5 && bmi > 10) {
-        workoutPlanDiv.innerHTML = `
+    if (bmi < 18.5 && bmi > 10) {
+      workoutPlanDiv.innerHTML = `
           <h2>Underweight</h2>
           <h4>Workout Plan</h4>
           <ul>
@@ -99,8 +188,8 @@
             <li>Dinner: Baked salmon, sweet potatoes, and steamed broccoli (600 kcal)</li>
           </ul>
         `;
-      } else if (bmi >= 18.5 && bmi < 24.9) {
-        workoutPlanDiv.innerHTML = `
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+      workoutPlanDiv.innerHTML = `
           <h2>Normal Weight</h2>
           <h4>Workout Plan</h4>
           <ul>
@@ -118,8 +207,8 @@
             <li>Dinner: Stir-fried tofu with brown rice and veggies (500 kcal)</li>
           </ul>
         `;
-      } else if (bmi >= 25 && bmi < 29.9) {
-        workoutPlanDiv.innerHTML = `
+    } else if (bmi >= 25 && bmi < 29.9) {
+      workoutPlanDiv.innerHTML = `
           <h2>Overweight</h2>
           <h4>Workout Plan</h4>
           <ul>
@@ -137,8 +226,8 @@
             <li>Dinner: Baked chicken breast with roasted vegetables (450 kcal)</li>
           </ul>
         `;
-      } else if (bmi >= 30 && bmi < 50) {
-        workoutPlanDiv.innerHTML = `
+    } else if (bmi >= 30 && bmi < 50) {
+      workoutPlanDiv.innerHTML = `
           <h2>Obese</h2>
           <h4>Workout Plan</h4>
           <ul>
@@ -155,12 +244,15 @@
             <li>Snack: Sliced cucumber and hummus (150 kcal)</li>
             <li>Dinner: Steamed fish with green beans and quinoa (450 kcal)</li>
           </ul>
-        `;
-      } else {
-        workoutPlanDiv.innerHTML = `<h2>Invalid Inputs!</h2>`;
-      }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-  </body>
+          `;
+
+    } else {
+      workoutPlanDiv.innerHTML =
+        `<h2>Invalid Inputs!</h2>
+         `;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
