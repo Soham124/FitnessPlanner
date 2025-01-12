@@ -69,7 +69,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Get New Plan!</a>
+              <a class="nav-link" href="index.html">Get New Plan!</a>
             </li>
           </ul>
         </div>
@@ -81,7 +81,7 @@
       const bmi = parseFloat(sessionStorage.getItem('bmi'));
       const workoutPlanDiv = document.getElementById('workoutPlan');
 
-      if (bmi<18.5 && bmi>10) {
+      if (bmi < 18.5 && bmi > 10) {
         workoutPlanDiv.innerHTML = `
           <h2>Underweight</h2>
           <h4>Workout Plan</h4>
@@ -137,7 +137,7 @@
             <li>Dinner: Baked chicken breast with roasted vegetables (450 kcal)</li>
           </ul>
         `;
-      } else if(bmi >= 30 && bmi < 50) {
+      } else if (bmi >= 30 && bmi < 50) {
         workoutPlanDiv.innerHTML = `
           <h2>Obese</h2>
           <h4>Workout Plan</h4>
@@ -155,13 +155,12 @@
             <li>Snack: Sliced cucumber and hummus (150 kcal)</li>
             <li>Dinner: Steamed fish with green beans and quinoa (450 kcal)</li>
           </ul>
-          `;
-        
-      }else{
-       workoutPlanDiv.innerHTML=
-         `<h2>Invalid Inputs!</h2>
-         `;
+        `;
+      } else {
+        workoutPlanDiv.innerHTML = `<h2>Invalid Inputs!</h2>`;
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
