@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <style>
       body {
         background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
@@ -12,9 +13,9 @@
         color: #fff;
       }
       .custom-form {
-        max-width: 500px; /* Increased from 400px to 500px */
+        max-width: 500px;
         width: 100%;
-        padding: 30px; /* Increased from 20px to 30px */
+        padding: 30px;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,7 +29,6 @@
         background: rgba(255, 255, 255, 0.8);
         border: none;
         color: #333;
-        box-shadow: none;
         border-radius: 8px;
       }
       .form-control:focus {
@@ -64,22 +64,23 @@
             <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z"/>
           </svg>
         </div>
-        <form class="custom-form">
+        <form class="custom-form" id="bmiForm">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Enter Your Height</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="height" class="form-label">Enter Your Height (in cm)</label>
+            <input type="text" class="form-control" id="height" required>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Enter Your Weight</label>
-            <input type="text" class="form-control" id="exampleInputPassword1">
+            <label for="weight" class="form-label">Enter Your Weight (in kg)</label>
+            <input type="text" class="form-control" id="weight" required>
           </div>
           <div class="text-center">
-            <a href="home.html" class="btn btn-primary">Submit</a>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>
     </div>
     
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
